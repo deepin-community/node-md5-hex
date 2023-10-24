@@ -1,5 +1,76 @@
-template-repository (1.0-1) unstable; urgency=medium
+node-md5-hex (4.0.0-2) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Apply multi-arch hints. + node-md5-hex: Add Multi-Arch: foreign.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Mon, 21 Nov 2022 10:28:19 +0000
+
+node-md5-hex (4.0.0-1) unstable; urgency=medium
+
+  * Team upload
+  * Drop component blueimp-md5 (Closes: #1006205)
+  * New upstream version 4.0.0
+  * Refresh patch
+  * Build commonjs files
+
+ -- Yadd <yadd@debian.org>  Mon, 21 Feb 2022 14:17:12 +0100
+
+node-md5-hex (3.0.1+~2.19.0-1) unstable; urgency=medium
+
+  * Team upload
+  * Declare compliance with policy 4.6.0
+  * Add "Rules-Requires-Root: no"
+  * Add debian/gbp.conf
+  * Modernize debian/watch
+  * Fix GitHub tags regex
+  * Drop nodejs dependency
+  * Use dh-sequence-nodejs auto install
+  * Enable upstream test (tape instead of ava)
+  * Embed blueimp-md5 without test/vendor dir
+  * New upstream version 3.0.1+~2.19.0
+  * Update copyright
+
+ -- Yadd <yadd@debian.org>  Sun, 12 Dec 2021 19:38:02 +0100
+
+node-md5-hex (2.0.0-5) unstable; urgency=medium
+
+  * Team upload
+  * Enable upstream test (tape instead of ava)
+
+ -- Yadd <yadd@debian.org>  Sun, 12 Dec 2021 19:06:22 +0100
+
+node-md5-hex (2.0.0-4) unstable; urgency=medium
+
+  * Remove constraints unnecessary since buster:
+    + node-md5-hex: Drop versioned constraint on node-md5-o-matic in Depends.
+  * Bump debhelper from old 12 to 13.
+
+ -- Debian Janitor <janitor@jelmer.uk>  Wed, 15 Sep 2021 10:44:44 +0100
+
+node-md5-hex (2.0.0-3) unstable; urgency=medium
+
+  * Trim trailing whitespace.
+  * Use secure copyright file specification URI.
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+ -- Debian Janitor <janitor@jelmer.uk>  Sun, 29 Aug 2021 01:19:05 +0100
+
+node-md5-hex (2.0.0-2) unstable; urgency=medium
+
+  [ Paolo Greppi ]
+  * Update Vcs fields for migration to https://salsa.debian.org/
+
+  [ Pirate Praveen ]
+  * Bump Standards-Version to 4.1.4 (no changes needed)
+  * Bump debhelper compatibility level to 11
+
+ -- Pirate Praveen <praveen@debian.org>  Wed, 06 Jun 2018 22:10:38 +0530
+
+node-md5-hex (2.0.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #853065)
+
+ -- Pirate Praveen <praveen@debian.org>  Fri, 09 Feb 2018 20:55:00 +0530

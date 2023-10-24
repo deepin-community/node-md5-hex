@@ -1,15 +1,32 @@
-Source: template-repository
-Section: unknown
+Source: node-md5-hex
+Section: javascript
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-blueimp-md5 <!nocheck>
+ , node-md5-o-matic <!nocheck>
+ , node-tape <!nocheck>
+ , rollup
+ , terser
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-md5-hex
+Vcs-Git: https://salsa.debian.org/js-team/node-md5-hex.git
+Homepage: https://github.com/sindresorhus/md5-hex
+Testsuite: autopkgtest-pkg-nodejs
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: node-md5-hex
+Architecture: all
+Depends: ${misc:Depends}
+ , node-md5-o-matic
+ , node-blueimp-md5
+Provides: ${nodejs:Provides}
+Multi-Arch: foreign
+Description: Create a MD5 hash with hex encoding
+ This modeule works in the browser too, when used with browserify/webpack.
+ .
+ Warning: Please don't use MD5 hashes for anything sensitive!
+ .
+ Node.js is an event-based server-side JavaScript engine.

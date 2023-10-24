@@ -1,0 +1,29 @@
+Description: export commonjs files
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2022-02-21
+
+--- a/package.json
++++ b/package.json
+@@ -10,9 +10,11 @@
+ 		"email": "sindresorhus@gmail.com",
+ 		"url": "https://sindresorhus.com"
+ 	},
+-	"type": "module",
++	"main": "./index.cjs",
++	"module": "./index.js",
+ 	"exports": {
+-		"node": "./index.js",
++		"import": "./index.js",
++		"require": "./index.cjs",
+ 		"default": "./browser.js"
+ 	},
+ 	"engines": {
+@@ -22,6 +24,7 @@
+ 		"test": "xo && ava && tsd"
+ 	},
+ 	"files": [
++		"index.cjs",
+ 		"index.js",
+ 		"index.d.ts",
+ 		"browser.js"
